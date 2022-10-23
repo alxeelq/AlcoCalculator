@@ -39,6 +39,9 @@
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.begunokNaczunia = new System.Windows.Forms.PictureBox();
             this.begunokSpirt = new System.Windows.Forms.PictureBox();
+            this.iloscNaczyniaLabel = new System.Windows.Forms.Label();
+            this.iloscSpirtLabel = new System.Windows.Forms.Label();
+            this.zawartoscSpirytusu = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.begunokNaczunia)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.begunokSpirt)).BeginInit();
             this.SuspendLayout();
@@ -137,9 +140,9 @@
             // begunokSpirt
             // 
             this.begunokSpirt.BackColor = System.Drawing.SystemColors.Control;
-            this.begunokSpirt.Location = new System.Drawing.Point(122, 318);
+            this.begunokSpirt.Location = new System.Drawing.Point(134, 122);
             this.begunokSpirt.Name = "begunokSpirt";
-            this.begunokSpirt.Size = new System.Drawing.Size(436, 30);
+            this.begunokSpirt.Size = new System.Drawing.Size(438, 30);
             this.begunokSpirt.TabIndex = 12;
             this.begunokSpirt.TabStop = false;
             this.begunokSpirt.Paint += new System.Windows.Forms.PaintEventHandler(this.beginokSpirt_Draw);
@@ -147,11 +150,37 @@
             this.begunokSpirt.MouseMove += new System.Windows.Forms.MouseEventHandler(this.begunokSpirt_MouseMove);
             this.begunokSpirt.MouseUp += new System.Windows.Forms.MouseEventHandler(this.begunokSpirt_MouseUp);
             // 
+            // iloscNaczyniaLabel
+            // 
+            this.iloscNaczyniaLabel.AutoSize = true;
+            this.iloscNaczyniaLabel.Location = new System.Drawing.Point(149, 12);
+            this.iloscNaczyniaLabel.Name = "iloscNaczyniaLabel";
+            this.iloscNaczyniaLabel.Size = new System.Drawing.Size(0, 20);
+            this.iloscNaczyniaLabel.TabIndex = 13;
+            // 
+            // iloscSpirtLabel
+            // 
+            this.iloscSpirtLabel.AutoSize = true;
+            this.iloscSpirtLabel.Location = new System.Drawing.Point(159, 92);
+            this.iloscSpirtLabel.Name = "iloscSpirtLabel";
+            this.iloscSpirtLabel.Size = new System.Drawing.Size(0, 20);
+            this.iloscSpirtLabel.TabIndex = 14;
+            // 
+            // zawartoscSpirytusu
+            // 
+            this.zawartoscSpirytusu.Location = new System.Drawing.Point(14, 125);
+            this.zawartoscSpirytusu.Name = "zawartoscSpirytusu";
+            this.zawartoscSpirytusu.Size = new System.Drawing.Size(114, 27);
+            this.zawartoscSpirytusu.TabIndex = 15;
+            // 
             // AlcoCalculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(582, 503);
+            this.Controls.Add(this.zawartoscSpirytusu);
+            this.Controls.Add(this.iloscSpirtLabel);
+            this.Controls.Add(this.iloscNaczyniaLabel);
             this.Controls.Add(this.begunokSpirt);
             this.Controls.Add(this.begunokNaczunia);
             this.Controls.Add(this.textBox5);
@@ -187,5 +216,8 @@
         private TextBox textBox5;
         private PictureBox begunokNaczunia;
         private PictureBox begunokSpirt;
+        private Label iloscNaczyniaLabel;
+        private Label iloscSpirtLabel;
+        private TextBox zawartoscSpirytusu;
     }
 }

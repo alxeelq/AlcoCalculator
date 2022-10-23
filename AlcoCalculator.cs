@@ -48,16 +48,16 @@ namespace AlcoCalculator
             thumbNaczynia(begunokNaczynia_width(e.X));
             
             float liczba = (float)(begunokNaczynia_width(e.X)) * valNaczynia;
-            wielkoscNaczynia.Text = liczba.ToString("#") + " ml";
+            iloscNaczyniaLabel.Text = liczba.ToString("#") + " ml";
             if (liczba < minNaczynia * valNaczynia)
             {
                 liczba = minNaczynia * valNaczynia;
-                wielkoscNaczynia.Text = liczba.ToString() + " ml";
+                iloscNaczyniaLabel.Text = liczba.ToString() + " ml";
             }
             else if (liczba > maxNaczynia * valNaczynia)
             {
                 liczba = maxNaczynia * valNaczynia;
-                wielkoscNaczynia.Text = liczba.ToString() + " ml";
+                iloscNaczyniaLabel.Text = liczba.ToString() + " ml";
             }
         }
 
@@ -66,16 +66,16 @@ namespace AlcoCalculator
             if(!mouseNaczynia) return;
             thumbNaczynia(begunokNaczynia_width(e.X));
             float liczaba = (float)(begunokNaczynia_width(e.X))*valNaczynia;          
-            wielkoscNaczynia.Text = liczaba.ToString("#")+" ml";
+            iloscNaczyniaLabel.Text = liczaba.ToString("#")+" ml";
             if (liczaba < minNaczynia*valNaczynia)
             {
                 liczaba = minNaczynia * valNaczynia;             
-                wielkoscNaczynia.Text = liczaba.ToString()+" ml";
+                iloscNaczyniaLabel.Text = liczaba.ToString()+" ml";
             }
             else if (liczaba > maxNaczynia*valNaczynia)
             {
                 liczaba = maxNaczynia*valNaczynia;               
-                wielkoscNaczynia.Text = liczaba.ToString()+" ml";
+                iloscNaczyniaLabel.Text = liczaba.ToString()+" ml";
             }
            
         }
@@ -136,16 +136,16 @@ namespace AlcoCalculator
             thumbSpirt(begunokSpirt_width(e.X));
 
             float liczba = (float)(begunokSpirt_width(e.X)) * valSpirt;
-            wielkoscNaczynia.Text = liczba.ToString("#") + " %";
+            iloscSpirtLabel.Text = liczba.ToString("#") + " %";
             if (liczba < minSpirt * valSpirt)
             {
                 liczba = minSpirt * valSpirt;
-                wielkoscNaczynia.Text = liczba.ToString() + " %";
+                iloscSpirtLabel.Text = liczba.ToString() + " %";
             }
             else if (liczba > maxSpirt * valSpirt)
             {
                 liczba = maxSpirt * valSpirt;
-                wielkoscNaczynia.Text = liczba.ToString() + " %";
+                iloscSpirtLabel.Text = liczba.ToString() + " %";
             }
         }
 
@@ -154,16 +154,16 @@ namespace AlcoCalculator
             if (!mouseSpirt) return;
             thumbSpirt(begunokSpirt_width(e.X));
             float liczaba = (float)(begunokSpirt_width(e.X)) * valSpirt;
-            wielkoscNaczynia.Text = liczaba.ToString("#") + " %";
+            iloscSpirtLabel.Text = liczaba.ToString("#") + " %";
             if (liczaba < minSpirt * valSpirt)
             {
                 liczaba = minSpirt * valSpirt;
-                wielkoscNaczynia.Text = liczaba.ToString() + " %";
+                iloscSpirtLabel.Text = liczaba.ToString() + " %";
             }
             else if (liczaba > maxSpirt * valSpirt)
             {
                 liczaba = maxSpirt * valSpirt;
-                wielkoscNaczynia.Text = liczaba.ToString() + " %";
+                iloscSpirtLabel.Text = liczaba.ToString() + " %";
             }
 
         }
