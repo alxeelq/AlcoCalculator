@@ -42,6 +42,7 @@
             this.iloscNaczyniaLabel = new System.Windows.Forms.Label();
             this.iloscSpirtLabel = new System.Windows.Forms.Label();
             this.zawartoscSpirytusu = new System.Windows.Forms.TextBox();
+            this.result = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.begunokNaczunia)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.begunokSpirt)).BeginInit();
             this.SuspendLayout();
@@ -58,11 +59,12 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(353, 249);
+            this.textBox3.Location = new System.Drawing.Point(14, 208);
             this.textBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(114, 27);
             this.textBox3.TabIndex = 2;
+            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label1
             // 
@@ -85,7 +87,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(353, 199);
+            this.label3.Location = new System.Drawing.Point(14, 174);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(137, 20);
             this.label3.TabIndex = 5;
@@ -94,7 +96,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(39, 199);
+            this.label4.Location = new System.Drawing.Point(14, 309);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(130, 20);
             this.label4.TabIndex = 6;
@@ -103,7 +105,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(200, 199);
+            this.label5.Location = new System.Drawing.Point(175, 309);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(118, 20);
             this.label5.TabIndex = 7;
@@ -111,19 +113,21 @@
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(39, 249);
+            this.textBox4.Location = new System.Drawing.Point(14, 359);
             this.textBox4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(114, 27);
             this.textBox4.TabIndex = 8;
+            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(200, 249);
+            this.textBox5.Location = new System.Drawing.Point(175, 359);
             this.textBox5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(114, 27);
             this.textBox5.TabIndex = 9;
+            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // begunokNaczunia
             // 
@@ -173,12 +177,23 @@
             this.zawartoscSpirytusu.Name = "zawartoscSpirytusu";
             this.zawartoscSpirytusu.Size = new System.Drawing.Size(114, 27);
             this.zawartoscSpirytusu.TabIndex = 15;
+            this.zawartoscSpirytusu.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // result
+            // 
+            this.result.Location = new System.Drawing.Point(14, 258);
+            this.result.Name = "result";
+            this.result.Size = new System.Drawing.Size(94, 29);
+            this.result.TabIndex = 16;
+            this.result.Text = "Obliczyс";
+            this.result.UseVisualStyleBackColor = true;
             // 
             // AlcoCalculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(582, 503);
+            this.Controls.Add(this.result);
             this.Controls.Add(this.zawartoscSpirytusu);
             this.Controls.Add(this.iloscSpirtLabel);
             this.Controls.Add(this.iloscNaczyniaLabel);
@@ -220,5 +235,6 @@
         private Label iloscNaczyniaLabel;
         private Label iloscSpirtLabel;
         private TextBox zawartoscSpirytusu;
+        private Button result;
     }
 }
