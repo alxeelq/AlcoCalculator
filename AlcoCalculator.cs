@@ -110,6 +110,12 @@ namespace AlcoCalculator
                 e.Graphics.DrawEllipse(pen,x+4, y - 6, begunokNaczunia.Height / 2,begunokNaczunia.Height/2);
             }
         }
+
+        private void wielkoscNaczynia_TextChanged(object sender, EventArgs e)
+        {
+            int x = Convert.ToInt32(wielkoscNaczynia.Text);
+            begunokNaczynia_width(x);
+        }
         //Здесь конец
 
         //Это отрисовка компонентов для ползунка СПИРТА начало
@@ -148,6 +154,8 @@ namespace AlcoCalculator
                 iloscSpirtLabel.Text = liczba.ToString() + " %";
             }
         }
+
+
 
         private void begunokSpirt_MouseMove(object sender, MouseEventArgs e)
         {
