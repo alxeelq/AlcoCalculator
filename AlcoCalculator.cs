@@ -111,11 +111,6 @@ namespace AlcoCalculator
             }
         }
 
-        private void wielkoscNaczynia_TextChanged(object sender, EventArgs e)
-        {
-            int x = Convert.ToInt32(wielkoscNaczynia.Text);
-            begunokNaczynia_width(x);
-        }
         //Здесь конец
 
         //Это отрисовка компонентов для ползунка СПИРТА начало
@@ -154,8 +149,6 @@ namespace AlcoCalculator
                 iloscSpirtLabel.Text = liczba.ToString() + " %";
             }
         }
-
-
 
         private void begunokSpirt_MouseMove(object sender, MouseEventArgs e)
         {
@@ -207,6 +200,17 @@ namespace AlcoCalculator
             }
         }
         //Здесь конец
+        private void result_Click(object sender, EventArgs e)
+        {
+            int naczynia = Convert.ToInt32(wielkoscNaczynia.Text);
+            int spirt = Convert.ToInt32(zawartoscSpirytusu.Text);
+            float x = naczynia / valNaczynia;
+            float y = spirt / valSpirt;
+            thumbNaczynia(maxNaczynia/valNaczynia*naczynia);
+            thumbSpirt(maxSpirt/valSpirt*spirt);       
+            iloscNaczyniaLabel.Text = naczynia.ToString() + " ml";
+            iloscSpirtLabel.Text = spirt.ToString()+" %";
+        }
 
     }
 }

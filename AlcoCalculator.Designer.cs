@@ -55,7 +55,6 @@
             this.wielkoscNaczynia.Size = new System.Drawing.Size(114, 27);
             this.wielkoscNaczynia.TabIndex = 1;
             this.wielkoscNaczynia.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.wielkoscNaczynia.TextChanged += new System.EventHandler(this.wielkoscNaczynia_TextChanged);
             // 
             // textBox3
             // 
@@ -187,6 +186,7 @@
             this.result.TabIndex = 16;
             this.result.Text = "Obliczyс";
             this.result.UseVisualStyleBackColor = true;
+            this.result.Click += new System.EventHandler(this.result_Click);
             // 
             // AlcoCalculator
             // 
