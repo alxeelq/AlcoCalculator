@@ -37,8 +37,10 @@
             this.label5 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
-            this.begunok = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.begunok)).BeginInit();
+            this.begunokNaczunia = new System.Windows.Forms.PictureBox();
+            this.begunokSpirt = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.begunokNaczunia)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.begunokSpirt)).BeginInit();
             this.SuspendLayout();
             // 
             // wielkoscNaczynia
@@ -52,7 +54,7 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(189, 44);
+            this.textBox3.Location = new System.Drawing.Point(353, 249);
             this.textBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(114, 27);
@@ -79,7 +81,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(196, 12);
+            this.label3.Location = new System.Drawing.Point(353, 199);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(137, 20);
             this.label3.TabIndex = 5;
@@ -119,25 +121,39 @@
             this.textBox5.Size = new System.Drawing.Size(114, 27);
             this.textBox5.TabIndex = 9;
             // 
-            // begunok
+            // begunokNaczunia
             // 
-            this.begunok.BackColor = System.Drawing.SystemColors.Control;
-            this.begunok.Location = new System.Drawing.Point(12, 133);
-            this.begunok.Name = "begunok";
-            this.begunok.Size = new System.Drawing.Size(558, 30);
-            this.begunok.TabIndex = 11;
-            this.begunok.TabStop = false;
-            this.begunok.Paint += new System.Windows.Forms.PaintEventHandler(this.beginok_Draw);
-            this.begunok.MouseDown += new System.Windows.Forms.MouseEventHandler(this.begunok_MouseDown);
-            this.begunok.MouseMove += new System.Windows.Forms.MouseEventHandler(this.begunok_MouseMove);
-            this.begunok.MouseUp += new System.Windows.Forms.MouseEventHandler(this.begunok_MouseUp);
+            this.begunokNaczunia.BackColor = System.Drawing.SystemColors.Control;
+            this.begunokNaczunia.Location = new System.Drawing.Point(134, 41);
+            this.begunokNaczunia.Name = "begunokNaczunia";
+            this.begunokNaczunia.Size = new System.Drawing.Size(436, 30);
+            this.begunokNaczunia.TabIndex = 11;
+            this.begunokNaczunia.TabStop = false;
+            this.begunokNaczunia.Paint += new System.Windows.Forms.PaintEventHandler(this.beginokNaczynia_Draw);
+            this.begunokNaczunia.MouseDown += new System.Windows.Forms.MouseEventHandler(this.begunokNaczynia_MouseDown);
+            this.begunokNaczunia.MouseMove += new System.Windows.Forms.MouseEventHandler(this.begunokNaczynia_MouseMove);
+            this.begunokNaczunia.MouseUp += new System.Windows.Forms.MouseEventHandler(this.begunokNaczynia_MouseUp);
+            // 
+            // begunokSpirt
+            // 
+            this.begunokSpirt.BackColor = System.Drawing.SystemColors.Control;
+            this.begunokSpirt.Location = new System.Drawing.Point(122, 318);
+            this.begunokSpirt.Name = "begunokSpirt";
+            this.begunokSpirt.Size = new System.Drawing.Size(436, 30);
+            this.begunokSpirt.TabIndex = 12;
+            this.begunokSpirt.TabStop = false;
+            this.begunokSpirt.Paint += new System.Windows.Forms.PaintEventHandler(this.beginokSpirt_Draw);
+            this.begunokSpirt.MouseDown += new System.Windows.Forms.MouseEventHandler(this.begunokSpirt_MouseDown);
+            this.begunokSpirt.MouseMove += new System.Windows.Forms.MouseEventHandler(this.begunokSpirt_MouseMove);
+            this.begunokSpirt.MouseUp += new System.Windows.Forms.MouseEventHandler(this.begunokSpirt_MouseUp);
             // 
             // AlcoCalculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(582, 503);
-            this.Controls.Add(this.begunok);
+            this.Controls.Add(this.begunokSpirt);
+            this.Controls.Add(this.begunokNaczunia);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.label5);
@@ -152,7 +168,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AlcoCalculator";
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.backgroundGradient);
-            ((System.ComponentModel.ISupportInitialize)(this.begunok)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.begunokNaczunia)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.begunokSpirt)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -168,6 +185,7 @@
         private Label label5;
         private TextBox textBox4;
         private TextBox textBox5;
-        private PictureBox begunok;
+        private PictureBox begunokNaczunia;
+        private PictureBox begunokSpirt;
     }
 }
