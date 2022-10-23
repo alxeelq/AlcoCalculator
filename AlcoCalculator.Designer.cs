@@ -37,9 +37,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
-            this.trackBar1 = new System.Windows.Forms.TrackBar();
             this.begunok = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.begunok)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,7 +52,7 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(327, 44);
+            this.textBox3.Location = new System.Drawing.Point(189, 44);
             this.textBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(114, 27);
@@ -72,7 +70,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(175, 12);
+            this.label2.Location = new System.Drawing.Point(14, 92);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(139, 20);
             this.label2.TabIndex = 4;
@@ -81,7 +79,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(327, 12);
+            this.label3.Location = new System.Drawing.Point(196, 12);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(137, 20);
             this.label3.TabIndex = 5;
@@ -90,7 +88,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(14, 117);
+            this.label4.Location = new System.Drawing.Point(39, 199);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(130, 20);
             this.label4.TabIndex = 6;
@@ -99,7 +97,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(175, 117);
+            this.label5.Location = new System.Drawing.Point(200, 199);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(118, 20);
             this.label5.TabIndex = 7;
@@ -107,7 +105,7 @@
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(14, 167);
+            this.textBox4.Location = new System.Drawing.Point(39, 249);
             this.textBox4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(114, 27);
@@ -115,26 +113,18 @@
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(175, 167);
+            this.textBox5.Location = new System.Drawing.Point(200, 249);
             this.textBox5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(114, 27);
             this.textBox5.TabIndex = 9;
             // 
-            // trackBar1
-            // 
-            this.trackBar1.Location = new System.Drawing.Point(135, 44);
-            this.trackBar1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.trackBar1.Name = "trackBar1";
-            this.trackBar1.Size = new System.Drawing.Size(185, 56);
-            this.trackBar1.TabIndex = 10;
-            // 
             // begunok
             // 
-            this.begunok.BackColor = System.Drawing.Color.Silver;
-            this.begunok.Location = new System.Drawing.Point(248, 301);
+            this.begunok.BackColor = System.Drawing.SystemColors.Control;
+            this.begunok.Location = new System.Drawing.Point(12, 133);
             this.begunok.Name = "begunok";
-            this.begunok.Size = new System.Drawing.Size(203, 30);
+            this.begunok.Size = new System.Drawing.Size(558, 30);
             this.begunok.TabIndex = 11;
             this.begunok.TabStop = false;
             this.begunok.Paint += new System.Windows.Forms.PaintEventHandler(this.beginok_Draw);
@@ -146,9 +136,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(914, 600);
+            this.ClientSize = new System.Drawing.Size(582, 503);
             this.Controls.Add(this.begunok);
-            this.Controls.Add(this.trackBar1);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.label5);
@@ -160,8 +149,9 @@
             this.Controls.Add(this.wielkoscNaczynia);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "AlcoCalculator";
-            this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "AlcoCalculator";
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.backgroundGradient);
             ((System.ComponentModel.ISupportInitialize)(this.begunok)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -178,7 +168,6 @@
         private Label label5;
         private TextBox textBox4;
         private TextBox textBox5;
-        private TrackBar trackBar1;
         private PictureBox begunok;
     }
 }

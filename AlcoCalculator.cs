@@ -1,3 +1,5 @@
+using System.Drawing.Drawing2D;
+
 namespace AlcoCalculator
 {
     public partial class AlcoCalculator : Form
@@ -9,7 +11,17 @@ namespace AlcoCalculator
             
         }
 
-//Это отрисовка компонентов для ползунка начало
+        private void backgroundGradient(object sender, PaintEventArgs e)
+        {
+            Graphics graphics = e.Graphics;
+            Pen pen = new Pen(Color.FromArgb(96, 155, 173), 1);
+            Rectangle area = new Rectangle(0, 0, this.Width - 1, this.Height - 1);
+            LinearGradientBrush linear = new LinearGradientBrush(area, Color.FromArgb(153, 204, 255), Color.FromArgb(76, 0,153), LinearGradientMode.ForwardDiagonal);
+            graphics.FillRectangle(linear, area);
+            graphics.DrawRectangle(pen, area);
+        }
+
+        //Это отрисовка компонентов для ползунка начало
         float default_Value = 0.1f, min = 0.0f, max = 1.0f;
         int val = 5000;//этодля преобразования перемещения ползунка в миллилитры
         public float Bar(float value)
@@ -31,17 +43,17 @@ namespace AlcoCalculator
             mouse = true;
             thumb(begunok_width(e.X));
             
-            float liczaba = (float)(begunok_width(e.X)) * val;
-            wielkoscNaczynia.Text = liczaba.ToString("#") + " ml";
-            if (liczaba < min * val)
+            float liczba = (float)(begunok_width(e.X)) * val;
+            wielkoscNaczynia.Text = liczba.ToString("#") + " ml";
+            if (liczba < min * val)
             {
-                liczaba = min * val;
-                wielkoscNaczynia.Text = liczaba.ToString() + " ml";
+                liczba = min * val;
+                wielkoscNaczynia.Text = liczba.ToString() + " ml";
             }
-            else if (liczaba > max * val)
+            else if (liczba > max * val)
             {
-                liczaba = max * val;
-                wielkoscNaczynia.Text = liczaba.ToString() + " ml";
+                liczba = max * val;
+                wielkoscNaczynia.Text = liczba.ToString() + " ml";
             }
         }
 
@@ -81,7 +93,7 @@ namespace AlcoCalculator
             float x = Bar(default_Value);
             int y = (int)(begunok.Height * bar_Size);
 
-            e.Graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+            e.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
             e.Graphics.FillRectangle(Brushes.Azure,0,y,begunok.Width,y/2);
             e.Graphics.FillRectangle(Brushes.Red,0,y,x,begunok.Height-2*y);
             using (Pen pen = new Pen(Color.Black, 8))
