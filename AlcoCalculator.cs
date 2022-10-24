@@ -6,35 +6,35 @@ namespace AlcoCalculator
     {
         private static readonly Image[] Snifter =
         {
-            Image.FromFile("Images/Рюмка1.png"),
-            Image.FromFile("Images/Рюмка2.png"),
-            Image.FromFile("Images/Рюмка3.png"),
-            Image.FromFile("Images/Рюмка4.png"),
-            Image.FromFile("Images/Рюмка5.png"),
+            Properties.Resources.Snifter1,
+            Properties.Resources.Snifter2,
+            Properties.Resources.Snifter3,
+            Properties.Resources.Snifter4,
+            Properties.Resources.Snifter5,
         };
         private static readonly Image[] Wineglass =
         {
-            Image.FromFile("Images/Бокал1.png"),
-            Image.FromFile("Images/Бокал2.png"),
-            Image.FromFile("Images/Бокал3.png"),
-            Image.FromFile("Images/Бокал4.png"),
-            Image.FromFile("Images/Бокал5.png")
+            Properties.Resources.Wineglass1,
+            Properties.Resources.Wineglass2,
+            Properties.Resources.Wineglass3,
+            Properties.Resources.Wineglass4,
+            Properties.Resources.Wineglass5
         };
         private static readonly Image[] Beerglass =
         {
-            Image.FromFile("Images/ПивнойБокал1.png"),
-            Image.FromFile("Images/ПивнойБокал2.png"),
-            Image.FromFile("Images/ПивнойБокал3.png"),
-            Image.FromFile("Images/ПивнойБокал4.png"),
-            Image.FromFile("Images/ПивнойБокал5.png"),
+            Properties.Resources.Beerglass1,
+            Properties.Resources.Beerglass2,
+            Properties.Resources.Beerglass3,
+            Properties.Resources.Beerglass4,
+            Properties.Resources.Beerglass5,
         };
         private static readonly Image[] Glass =
         {
-            Image.FromFile("Images/Стакан1.png"),
-            Image.FromFile("Images/Стакан2.png"),
-            Image.FromFile("Images/Стакан3.png"),
-            Image.FromFile("Images/Стакан4.png"),
-            Image.FromFile("Images/Стакан5.png"),
+            Properties.Resources.Glass1,
+            Properties.Resources.Glass2,
+            Properties.Resources.Glass3,
+            Properties.Resources.Glass4,
+            Properties.Resources.Glass5,
         };       
 
         public AlcoCalculator()
@@ -387,7 +387,7 @@ namespace AlcoCalculator
                 pbNaczynia.Image = Wineglass[0];
             }
 
-            if (liczba > 250 && liczba <= 500)
+            if (liczba > 250 && liczba <= 1000)
             {
                 pbNaczynia.Image = Beerglass[0];
             }

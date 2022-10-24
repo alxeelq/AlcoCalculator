@@ -117,4 +117,65 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Beerglass1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Images\ПивнойБокал1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Beerglass2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Images\ПивнойБокал2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Beerglass3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Images\ПивнойБокал3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Beerglass4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Images\ПивнойБокал4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Beerglass5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Images\ПивнойБокал5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Glass1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Images\Стакан1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Glass2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Images\Стакан2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Glass3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Images\Стакан3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Glass4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Images\Стакан4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Glass5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Images\Стакан5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Snifter1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Images\Рюмка1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Snifter2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Images\Рюмка2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Snifter3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Images\Рюмка3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Snifter4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Images\Рюмка4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Snifter5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Images\Рюмка5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Wineglass1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Images\Бокал1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Wineglass2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Images\Бокал2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Wineglass3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Images\Бокал3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Wineglass4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Images\Бокал4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Wineglass5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Images\Бокал5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
