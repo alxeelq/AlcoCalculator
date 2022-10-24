@@ -9,35 +9,35 @@ namespace AlcoCalculator
 
         private static readonly Image[] Snifter =
         {
-            Properties.Resources.Snifter1,
-            Properties.Resources.Snifter2,
-            Properties.Resources.Snifter3,
-            Properties.Resources.Snifter4,
-            Properties.Resources.Snifter5,
+            Properties.Resources.roks1,
+            Properties.Resources.roks2,
+            Properties.Resources.roks3,
+            Properties.Resources.roks4,
+            Properties.Resources.roks5,
         };
         private static readonly Image[] Wineglass =
         {
-            Properties.Resources.Wineglass1,
-            Properties.Resources.Wineglass2,
-            Properties.Resources.Wineglass3,
-            Properties.Resources.Wineglass4,
-            Properties.Resources.Wineglass5
+            Properties.Resources.fantanaiver1,
+            Properties.Resources.fantanaiver2,
+            Properties.Resources.fantanaiver3,
+            Properties.Resources.fantanaiver4,
+            Properties.Resources.fantanaiver5
         };
         private static readonly Image[] Beerglass =
         {
-            Properties.Resources.Beerglass1,
-            Properties.Resources.Beerglass2,
-            Properties.Resources.Beerglass3,
-            Properties.Resources.Beerglass4,
-            Properties.Resources.Beerglass5,
+            Properties.Resources.beer1,
+            Properties.Resources.beer2,
+            Properties.Resources.beer3,
+            Properties.Resources.beer4,
+            Properties.Resources.beer5,
         };
         private static readonly Image[] Glass =
         {
-            Properties.Resources.Glass1,
-            Properties.Resources.Glass2,
-            Properties.Resources.Glass3,
-            Properties.Resources.Glass4,
-            Properties.Resources.Glass5,
+            Properties.Resources.margarita1,
+            Properties.Resources.margarita2,
+            Properties.Resources.margarita3,
+            Properties.Resources.margarita4,
+            Properties.Resources.margarita5,
         };       
 
         public AlcoCalculator()

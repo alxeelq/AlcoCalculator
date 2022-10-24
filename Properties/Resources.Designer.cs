@@ -63,9 +63,9 @@ namespace AlcoCalculator.Properties {
         /// <summary>
         ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Beerglass1 {
+        internal static System.Drawing.Bitmap beer1 {
             get {
-                object obj = ResourceManager.GetObject("Beerglass1", resourceCulture);
+                object obj = ResourceManager.GetObject("beer1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace AlcoCalculator.Properties {
         /// <summary>
         ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Beerglass2 {
+        internal static System.Drawing.Bitmap beer2 {
             get {
-                object obj = ResourceManager.GetObject("Beerglass2", resourceCulture);
+                object obj = ResourceManager.GetObject("beer2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +83,9 @@ namespace AlcoCalculator.Properties {
         /// <summary>
         ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Beerglass3 {
+        internal static System.Drawing.Bitmap beer3 {
             get {
-                object obj = ResourceManager.GetObject("Beerglass3", resourceCulture);
+                object obj = ResourceManager.GetObject("beer3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,9 +93,9 @@ namespace AlcoCalculator.Properties {
         /// <summary>
         ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Beerglass4 {
+        internal static System.Drawing.Bitmap beer4 {
             get {
-                object obj = ResourceManager.GetObject("Beerglass4", resourceCulture);
+                object obj = ResourceManager.GetObject("beer4", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,9 +103,9 @@ namespace AlcoCalculator.Properties {
         /// <summary>
         ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Beerglass5 {
+        internal static System.Drawing.Bitmap beer5 {
             get {
-                object obj = ResourceManager.GetObject("Beerglass5", resourceCulture);
+                object obj = ResourceManager.GetObject("beer5", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,9 +113,9 @@ namespace AlcoCalculator.Properties {
         /// <summary>
         ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Glass1 {
+        internal static System.Drawing.Bitmap fantanaiver1 {
             get {
-                object obj = ResourceManager.GetObject("Glass1", resourceCulture);
+                object obj = ResourceManager.GetObject("fantanaiver1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,9 +123,9 @@ namespace AlcoCalculator.Properties {
         /// <summary>
         ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Glass2 {
+        internal static System.Drawing.Bitmap fantanaiver2 {
             get {
-                object obj = ResourceManager.GetObject("Glass2", resourceCulture);
+                object obj = ResourceManager.GetObject("fantanaiver2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -133,9 +133,9 @@ namespace AlcoCalculator.Properties {
         /// <summary>
         ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Glass3 {
+        internal static System.Drawing.Bitmap fantanaiver3 {
             get {
-                object obj = ResourceManager.GetObject("Glass3", resourceCulture);
+                object obj = ResourceManager.GetObject("fantanaiver3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -143,9 +143,9 @@ namespace AlcoCalculator.Properties {
         /// <summary>
         ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Glass4 {
+        internal static System.Drawing.Bitmap fantanaiver4 {
             get {
-                object obj = ResourceManager.GetObject("Glass4", resourceCulture);
+                object obj = ResourceManager.GetObject("fantanaiver4", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -153,9 +153,9 @@ namespace AlcoCalculator.Properties {
         /// <summary>
         ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Glass5 {
+        internal static System.Drawing.Bitmap fantanaiver5 {
             get {
-                object obj = ResourceManager.GetObject("Glass5", resourceCulture);
+                object obj = ResourceManager.GetObject("fantanaiver5", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -163,9 +163,9 @@ namespace AlcoCalculator.Properties {
         /// <summary>
         ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Snifter1 {
+        internal static System.Drawing.Bitmap margarita1 {
             get {
-                object obj = ResourceManager.GetObject("Snifter1", resourceCulture);
+                object obj = ResourceManager.GetObject("margarita1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -173,9 +173,9 @@ namespace AlcoCalculator.Properties {
         /// <summary>
         ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Snifter2 {
+        internal static System.Drawing.Bitmap margarita2 {
             get {
-                object obj = ResourceManager.GetObject("Snifter2", resourceCulture);
+                object obj = ResourceManager.GetObject("margarita2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -183,9 +183,9 @@ namespace AlcoCalculator.Properties {
         /// <summary>
         ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Snifter3 {
+        internal static System.Drawing.Bitmap margarita3 {
             get {
-                object obj = ResourceManager.GetObject("Snifter3", resourceCulture);
+                object obj = ResourceManager.GetObject("margarita3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -193,9 +193,9 @@ namespace AlcoCalculator.Properties {
         /// <summary>
         ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Snifter4 {
+        internal static System.Drawing.Bitmap margarita4 {
             get {
-                object obj = ResourceManager.GetObject("Snifter4", resourceCulture);
+                object obj = ResourceManager.GetObject("margarita4", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -203,9 +203,9 @@ namespace AlcoCalculator.Properties {
         /// <summary>
         ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Snifter5 {
+        internal static System.Drawing.Bitmap margarita5 {
             get {
-                object obj = ResourceManager.GetObject("Snifter5", resourceCulture);
+                object obj = ResourceManager.GetObject("margarita5", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -213,9 +213,9 @@ namespace AlcoCalculator.Properties {
         /// <summary>
         ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Wineglass1 {
+        internal static System.Drawing.Bitmap roks1 {
             get {
-                object obj = ResourceManager.GetObject("Wineglass1", resourceCulture);
+                object obj = ResourceManager.GetObject("roks1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -223,9 +223,9 @@ namespace AlcoCalculator.Properties {
         /// <summary>
         ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Wineglass2 {
+        internal static System.Drawing.Bitmap roks2 {
             get {
-                object obj = ResourceManager.GetObject("Wineglass2", resourceCulture);
+                object obj = ResourceManager.GetObject("roks2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -233,9 +233,9 @@ namespace AlcoCalculator.Properties {
         /// <summary>
         ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Wineglass3 {
+        internal static System.Drawing.Bitmap roks3 {
             get {
-                object obj = ResourceManager.GetObject("Wineglass3", resourceCulture);
+                object obj = ResourceManager.GetObject("roks3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -243,9 +243,9 @@ namespace AlcoCalculator.Properties {
         /// <summary>
         ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Wineglass4 {
+        internal static System.Drawing.Bitmap roks4 {
             get {
-                object obj = ResourceManager.GetObject("Wineglass4", resourceCulture);
+                object obj = ResourceManager.GetObject("roks4", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -253,9 +253,9 @@ namespace AlcoCalculator.Properties {
         /// <summary>
         ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Wineglass5 {
+        internal static System.Drawing.Bitmap roks5 {
             get {
-                object obj = ResourceManager.GetObject("Wineglass5", resourceCulture);
+                object obj = ResourceManager.GetObject("roks5", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
