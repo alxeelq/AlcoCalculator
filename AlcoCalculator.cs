@@ -45,6 +45,7 @@ namespace AlcoCalculator
             InitializeComponent();
             begunokNaczunia.Height = 30;
             begunokSpirt.Height = 30;
+            begunokSpirt.Height = 30;
             thumbNaczynia(0);
             thumbSpirt(0);
             thumbSztuk(0);            
@@ -355,7 +356,7 @@ namespace AlcoCalculator
                 else
                 {
                     int naczynie = Int32.Parse(wielkoscNaczynia.Text);
-                    thumbNaczynia(maxSztuk / valSztuk * naczynie);
+                    thumbNaczynia(maxNaczynia / valNaczynia * naczynie);
                     iloscNaczyniaLabel.Text = naczynie.ToString() + " ml";
 
                 }
