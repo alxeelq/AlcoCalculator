@@ -124,7 +124,7 @@ namespace AlcoCalculator
                 iloscNaczyniaLabel.Text = liczba.ToString()+" ml";
             }
 
-            UpdatePicture(liczba);
+            ZmienicObrazNaczynia(liczba, 0);
         }
         private void begunokNaczynia_MouseUp(object sender, MouseEventArgs e)
         {
@@ -346,8 +346,6 @@ namespace AlcoCalculator
         {
             try
             {
-
-
                 if (wielkoscNaczynia.Text == "")
                 {
                     string Nacz = iloscNaczyniaLabel.Text;
@@ -408,7 +406,7 @@ namespace AlcoCalculator
                 resultTextBoxAlcohol.Text = VolumeAlcohol(S, N, I).ToString() + " ml";
                 resultTextBoxVolume.Text = VolumeAll(N, I).ToString() + " ml";
 
-                
+                ZmienicObrazNaczynia((int)N, AktualizacjaZawartosciSpirytusu(S));
             }
             catch 
             {
@@ -440,28 +438,53 @@ namespace AlcoCalculator
             iloscSztukLabel.Text = "";
             resultTextBoxAlcohol.Text = "";
             resultTextBoxVolume.Text = "";
+            pbNaczynia.Image = null;
         }
 
-        private void UpdatePicture(float liczba)
+        private void ZmienicObrazNaczynia(float liczba, int index)
         {
             if (liczba >= 0 && liczba <= 50)
             {
-                pbNaczynia.Image = Snifter[0];
+                pbNaczynia.Image = Snifter[index];
             }
 
             if (liczba > 50 && liczba <= 200)
             {
-                pbNaczynia.Image = Glass[0];
+                pbNaczynia.Image = Glass[index];
             }
 
             if (liczba > 200 && liczba <= 250)
             {
-                pbNaczynia.Image = Wineglass[0];
+                pbNaczynia.Image = Wineglass[index];
             }
 
             if (liczba > 250 && liczba <= 1000)
             {
-                pbNaczynia.Image = Beerglass[0];
+                pbNaczynia.Image = Beerglass[index];
+            }
+        }
+
+        private int AktualizacjaZawartosciSpirytusu(double S)
+        {
+            if (S > 0 && S <= 25)
+            {
+                return 1;
+            } 
+            else if (S > 25 && S <= 50)
+            {
+                return 2;
+            }
+            else if (S > 50 && S <= 75)
+            {
+                return 3;
+            }
+            else if (S > 75 && S <= 95)
+            {
+                return 4;
+            }
+            else
+            {
+                return 0;
             }
         }
     }
