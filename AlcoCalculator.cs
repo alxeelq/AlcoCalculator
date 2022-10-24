@@ -45,6 +45,7 @@ namespace AlcoCalculator
             InitializeComponent();
             begunokNaczunia.Height = 30;
             begunokSpirt.Height = 30;
+            begunokSpirt.Height = 30;
             thumbNaczynia(0);
             thumbSpirt(0);
             thumbSztuk(0);            

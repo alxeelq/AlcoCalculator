@@ -208,7 +208,7 @@
             this.begunokSztuk.Location = new System.Drawing.Point(269, 158);
             this.begunokSztuk.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.begunokSztuk.Name = "begunokSztuk";
-            this.begunokSztuk.Size = new System.Drawing.Size(383, 22);
+            this.begunokSztuk.Size = new System.Drawing.Size(383, 30);
             this.begunokSztuk.TabIndex = 17;
             this.begunokSztuk.TabStop = false;
             this.begunokSztuk.Paint += new System.Windows.Forms.PaintEventHandler(this.beginokSztuk_Draw);
