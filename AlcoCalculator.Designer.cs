@@ -47,6 +47,10 @@
             this.iloscSztukLabel = new System.Windows.Forms.Label();
             this.Clear = new System.Windows.Forms.Button();
             this.pbNaczynia = new System.Windows.Forms.PictureBox();
+            this.cbTypoweNaczynia = new System.Windows.Forms.ComboBox();
+            this.cbTypoweNapoje = new System.Windows.Forms.ComboBox();
+            this.lTypoweNaczynia = new System.Windows.Forms.Label();
+            this.lTypoweNapoje = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.begunokNaczunia)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.begunokSpirt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.begunokSztuk)).BeginInit();
@@ -237,7 +241,7 @@
             // 
             // pbNaczynia
             // 
-            this.pbNaczynia.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.pbNaczynia.BackColor = System.Drawing.Color.White;
             this.pbNaczynia.Location = new System.Drawing.Point(424, 196);
             this.pbNaczynia.Name = "pbNaczynia";
             this.pbNaczynia.Size = new System.Drawing.Size(225, 171);
@@ -245,11 +249,66 @@
             this.pbNaczynia.TabIndex = 20;
             this.pbNaczynia.TabStop = false;
             // 
+            // cbTypoweNaczynia
+            // 
+            this.cbTypoweNaczynia.FormattingEnabled = true;
+            this.cbTypoweNaczynia.Items.AddRange(new object[] {
+            "Brak",
+            "Roks",
+            "Margarita",
+            "Fantaniver",
+            "Kufel"});
+            this.cbTypoweNaczynia.Location = new System.Drawing.Point(12, 35);
+            this.cbTypoweNaczynia.Name = "cbTypoweNaczynia";
+            this.cbTypoweNaczynia.Size = new System.Drawing.Size(121, 23);
+            this.cbTypoweNaczynia.TabIndex = 21;
+            this.cbTypoweNaczynia.SelectedIndexChanged += new System.EventHandler(this.cbTypoweNaczynia_SelectedIndexChanged);
+            // 
+            // cbTypoweNapoje
+            // 
+            this.cbTypoweNapoje.FormattingEnabled = true;
+            this.cbTypoweNapoje.Items.AddRange(new object[] {
+            "Brak",
+            "Piwo (5%)",
+            "Wino (17%)",
+            "Wodka (40%)",
+            "Jin (43%)",
+            "Whisky (45%)"});
+            this.cbTypoweNapoje.Location = new System.Drawing.Point(12, 96);
+            this.cbTypoweNapoje.Name = "cbTypoweNapoje";
+            this.cbTypoweNapoje.Size = new System.Drawing.Size(121, 23);
+            this.cbTypoweNapoje.TabIndex = 22;
+            this.cbTypoweNapoje.SelectedIndexChanged += new System.EventHandler(this.cbTypoweNapoje_SelectedIndexChanged);
+            // 
+            // lTypoweNaczynia
+            // 
+            this.lTypoweNaczynia.AutoSize = true;
+            this.lTypoweNaczynia.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.lTypoweNaczynia.Location = new System.Drawing.Point(12, 11);
+            this.lTypoweNaczynia.Name = "lTypoweNaczynia";
+            this.lTypoweNaczynia.Size = new System.Drawing.Size(96, 15);
+            this.lTypoweNaczynia.TabIndex = 23;
+            this.lTypoweNaczynia.Text = "Typowe naczynia";
+            // 
+            // lTypoweNapoje
+            // 
+            this.lTypoweNapoje.AutoSize = true;
+            this.lTypoweNapoje.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.lTypoweNapoje.Location = new System.Drawing.Point(12, 69);
+            this.lTypoweNapoje.Name = "lTypoweNapoje";
+            this.lTypoweNapoje.Size = new System.Drawing.Size(86, 15);
+            this.lTypoweNapoje.TabIndex = 24;
+            this.lTypoweNapoje.Text = "Typowe napoje";
+            // 
             // AlcoCalculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(672, 377);
+            this.Controls.Add(this.lTypoweNapoje);
+            this.Controls.Add(this.lTypoweNaczynia);
+            this.Controls.Add(this.cbTypoweNapoje);
+            this.Controls.Add(this.cbTypoweNaczynia);
             this.Controls.Add(this.pbNaczynia);
             this.Controls.Add(this.Clear);
             this.Controls.Add(this.iloscSztukLabel);
@@ -302,5 +361,9 @@
         private Label iloscSztukLabel;
         private Button Clear;
         private PictureBox pbNaczynia;
+        private ComboBox cbTypoweNaczynia;
+        private ComboBox cbTypoweNapoje;
+        private Label lTypoweNaczynia;
+        private Label lTypoweNapoje;
     }
 }

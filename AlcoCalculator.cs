@@ -48,7 +48,9 @@ namespace AlcoCalculator
             begunokSpirt.Height = 30;
             thumbNaczynia(0);
             thumbSpirt(0);
-            thumbSztuk(0);            
+            thumbSztuk(0);
+            cbTypoweNaczynia.SelectedIndex = 0;
+            cbTypoweNapoje.SelectedIndex = 0;
         }
         public double VolumeAlcohol(double alkochol, double volume, double amount)
         {       
@@ -316,6 +318,66 @@ namespace AlcoCalculator
             mouseSztuk = false;
         }
 
+        private void cbTypoweNaczynia_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (cbTypoweNaczynia.SelectedIndex)
+            {
+                case 1:
+                    wielkoscNaczynia.Text = "50";
+                    ZmienicObrazNaczynia(50, 0);
+                    break;
+
+                case 2:
+                    wielkoscNaczynia.Text = "150";
+                    ZmienicObrazNaczynia(150, 0);
+                    break;
+
+                case 3:
+                    wielkoscNaczynia.Text = "250";
+                    ZmienicObrazNaczynia(250, 0);
+                    break;
+
+                case 4:
+                    wielkoscNaczynia.Text = "500";
+                    ZmienicObrazNaczynia(500, 0);
+                    break;
+
+                default:
+                    wielkoscNaczynia.Text = "";
+                    pbNaczynia.Image = null;
+                    break;
+            }
+        }
+
+        private void cbTypoweNapoje_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (cbTypoweNapoje.SelectedIndex)
+            {
+                case 1:
+                    zawartoscSpirytusu.Text = "5";
+                    break;
+
+                case 2:
+                    zawartoscSpirytusu.Text = "17";
+                    break;
+
+                case 3:
+                    zawartoscSpirytusu.Text = "40";
+                    break;
+
+                case 4:
+                    zawartoscSpirytusu.Text = "43";
+                    break;
+
+                case 5:
+                    zawartoscSpirytusu.Text = "45";
+                    break;
+
+                default:
+                    zawartoscSpirytusu.Text = "";
+                    break;
+            }
+        }
 
         public float begunokSztuk_width(int x)
         {
@@ -423,6 +485,9 @@ namespace AlcoCalculator
                 iloscSztukLabel.Text = "";
                 resultTextBoxAlcohol.Text = "";
                 resultTextBoxVolume.Text = "";
+                cbTypoweNapoje.SelectedIndex = 0;
+                cbTypoweNaczynia.SelectedIndex = 0;
+                pbNaczynia.Image = null;
             }
 
         }
@@ -440,6 +505,8 @@ namespace AlcoCalculator
             resultTextBoxAlcohol.Text = "";
             resultTextBoxVolume.Text = "";
             pbNaczynia.Image = null;
+            cbTypoweNaczynia.SelectedIndex = 0;
+            cbTypoweNapoje.SelectedIndex = 0;
         }
 
         private void ZmienicObrazNaczynia(float liczba, int index)
@@ -449,12 +516,12 @@ namespace AlcoCalculator
                 pbNaczynia.Image = Snifter[index];
             }
 
-            if (liczba > 50 && liczba <= 200)
+            if (liczba > 50 && liczba <= 150)
             {
                 pbNaczynia.Image = Glass[index];
             }
 
-            if (liczba > 200 && liczba <= 250)
+            if (liczba > 150 && liczba <= 250)
             {
                 pbNaczynia.Image = Wineglass[index];
             }
