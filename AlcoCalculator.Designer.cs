@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.wielkoscNaczynia = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.iloscSztuk = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -43,8 +43,12 @@
             this.iloscSpirtLabel = new System.Windows.Forms.Label();
             this.zawartoscSpirytusu = new System.Windows.Forms.TextBox();
             this.result = new System.Windows.Forms.Button();
+            this.begunokSztuk = new System.Windows.Forms.PictureBox();
+            this.iloscSztukLabel = new System.Windows.Forms.Label();
+            this.Clear = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.begunokNaczunia)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.begunokSpirt)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.begunokSztuk)).BeginInit();
             this.SuspendLayout();
             // 
             // wielkoscNaczynia
@@ -56,14 +60,14 @@
             this.wielkoscNaczynia.TabIndex = 1;
             this.wielkoscNaczynia.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox3
+            // iloscSztuk
             // 
-            this.textBox3.Location = new System.Drawing.Point(14, 208);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(114, 27);
-            this.textBox3.TabIndex = 2;
-            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.iloscSztuk.Location = new System.Drawing.Point(14, 211);
+            this.iloscSztuk.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.iloscSztuk.Name = "iloscSztuk";
+            this.iloscSztuk.Size = new System.Drawing.Size(114, 27);
+            this.iloscSztuk.TabIndex = 2;
+            this.iloscSztuk.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label1
             // 
@@ -188,11 +192,45 @@
             this.result.UseVisualStyleBackColor = true;
             this.result.Click += new System.EventHandler(this.result_Click);
             // 
+            // begunokSztuk
+            // 
+            this.begunokSztuk.BackColor = System.Drawing.SystemColors.Control;
+            this.begunokSztuk.Location = new System.Drawing.Point(134, 208);
+            this.begunokSztuk.Name = "begunokSztuk";
+            this.begunokSztuk.Size = new System.Drawing.Size(438, 30);
+            this.begunokSztuk.TabIndex = 17;
+            this.begunokSztuk.TabStop = false;
+            this.begunokSztuk.Paint += new System.Windows.Forms.PaintEventHandler(this.beginokSztuk_Draw);
+            this.begunokSztuk.MouseDown += new System.Windows.Forms.MouseEventHandler(this.begunokSztuk_MouseDown);
+            this.begunokSztuk.MouseMove += new System.Windows.Forms.MouseEventHandler(this.begunokSztuk_MouseMove);
+            this.begunokSztuk.MouseUp += new System.Windows.Forms.MouseEventHandler(this.begunokSztuk_MouseUp);
+            // 
+            // iloscSztukLabel
+            // 
+            this.iloscSztukLabel.AutoSize = true;
+            this.iloscSztukLabel.Location = new System.Drawing.Point(157, 174);
+            this.iloscSztukLabel.Name = "iloscSztukLabel";
+            this.iloscSztukLabel.Size = new System.Drawing.Size(0, 20);
+            this.iloscSztukLabel.TabIndex = 18;
+            // 
+            // Clear
+            // 
+            this.Clear.Location = new System.Drawing.Point(114, 258);
+            this.Clear.Name = "Clear";
+            this.Clear.Size = new System.Drawing.Size(94, 29);
+            this.Clear.TabIndex = 19;
+            this.Clear.Text = "Wyczyscic";
+            this.Clear.UseVisualStyleBackColor = true;
+            this.Clear.Click += new System.EventHandler(this.Clear_Click);
+            // 
             // AlcoCalculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(582, 503);
+            this.Controls.Add(this.Clear);
+            this.Controls.Add(this.iloscSztukLabel);
+            this.Controls.Add(this.begunokSztuk);
             this.Controls.Add(this.result);
             this.Controls.Add(this.zawartoscSpirytusu);
             this.Controls.Add(this.iloscSpirtLabel);
@@ -206,7 +244,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.iloscSztuk);
             this.Controls.Add(this.wielkoscNaczynia);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "AlcoCalculator";
@@ -215,6 +253,7 @@
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.backgroundGradient);
             ((System.ComponentModel.ISupportInitialize)(this.begunokNaczunia)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.begunokSpirt)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.begunokSztuk)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -222,7 +261,7 @@
 
         #endregion
         private TextBox wielkoscNaczynia;
-        private TextBox textBox3;
+        private TextBox iloscSztuk;
         private Label label1;
         private Label label2;
         private Label label3;
@@ -236,5 +275,8 @@
         private Label iloscSpirtLabel;
         private TextBox zawartoscSpirytusu;
         private Button result;
+        private PictureBox begunokSztuk;
+        private Label iloscSztukLabel;
+        private Button Clear;
     }
 }

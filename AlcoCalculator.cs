@@ -11,7 +11,7 @@ namespace AlcoCalculator
             begunokSpirt.Height = 30;
             thumbNaczynia(0);
             thumbSpirt(0);
-            
+            thumbSztuk(0);
         }
 
 
@@ -100,7 +100,7 @@ namespace AlcoCalculator
             int y = (int)(begunokNaczunia.Height * bar_Size);
 
             e.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
-            e.Graphics.FillRectangle(Brushes.Azure,0,y,begunokNaczunia.Width,y/2);
+            e.Graphics.FillRectangle(Brushes.DarkOrchid,0,y,begunokNaczunia.Width,y/2);
             e.Graphics.FillRectangle(Brushes.Red,0,y,x,begunokNaczunia.Height-2*y);
             using (Pen pen = new Pen(Color.Black, 8))
             {
@@ -117,13 +117,13 @@ namespace AlcoCalculator
 
         //Это отрисовка компонентов для ползунка СПИРТА начало
         float default_ValueSpirt = 0.1f, minSpirt = 0.0f, maxSpirt = 1.0f;
-        int valSpirt = 95;//этодля преобразования перемещения ползунка в градусы
+        int valSpirt = 95;//это для преобразования перемещения ползунка в градусы
         bool mouseSpirt = false;
         public float BarSpirt(float value)
         {
             return (begunokSpirt.Width - 24) * (value - minSpirt) / (float)(maxSpirt - minSpirt);
         }
-
+//Задает начальные координаты бегунка
         public void thumbSpirt(float value)
         {
             if (value < minSpirt) value = minSpirt;
@@ -181,7 +181,7 @@ namespace AlcoCalculator
             return minSpirt + (maxSpirt - minSpirt) * x / (float)(begunokSpirt.Width);
 
         }
-
+//Отрисовка самого бегунка
         private void beginokSpirt_Draw(object sender, PaintEventArgs e)
         {
             float bar_Size = 0.45f;
@@ -189,7 +189,7 @@ namespace AlcoCalculator
             int y = (int)(begunokSpirt.Height * bar_Size);
 
             e.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
-            e.Graphics.FillRectangle(Brushes.Azure, 0, y, begunokSpirt.Width, y / 2);
+            e.Graphics.FillRectangle(Brushes.DarkBlue, 0, y, begunokSpirt.Width, y / 2);
             e.Graphics.FillRectangle(Brushes.Red, 0, y, x, begunokSpirt.Height - 2 * y);
             using (Pen pen = new Pen(Color.Black, 8))
             {
@@ -202,16 +202,139 @@ namespace AlcoCalculator
             }
         }
         //Здесь конец
-        private void result_Click(object sender, EventArgs e)
+
+        //Это отрисовка компонентов для ползунка Штук начало
+        float default_ValueSztuk = 0.1f, minSztuk = 0.0f, maxSztuk = 1.0f;
+        int valSztuk = 100;//этодля преобразования перемещения ползунка в градусы
+        bool mouseSztuk = false;
+        public float BarSztuk(float value)
         {
-            int naczynia = Convert.ToInt32(wielkoscNaczynia.Text);
-            int spirt = Convert.ToInt32(zawartoscSpirytusu.Text);
-            float x = naczynia / valNaczynia;
-            float y = spirt / valSpirt;
-            thumbNaczynia(maxNaczynia/valNaczynia*naczynia);
-            thumbSpirt(maxSpirt/valSpirt*spirt);       
-            iloscNaczyniaLabel.Text = naczynia.ToString() + " ml";
-            iloscSpirtLabel.Text = spirt.ToString()+" %";
+            return (begunokSztuk.Width - 24) * (value - minSztuk) / (float)(maxSztuk - minSztuk);
+        }
+
+        public void thumbSztuk(float value)
+        {
+            if (value < minSztuk) value = minSztuk;
+            if (value > maxSztuk) value = maxSztuk;
+            default_ValueSztuk = value;
+            begunokSztuk.Refresh();
+        }
+
+      
+
+        private void begunokSztuk_MouseDown(object sender, MouseEventArgs e)
+        {
+            mouseSztuk = true;
+            thumbSztuk(begunokSztuk_width(e.X));
+
+            float liczba = (float)(begunokSztuk_width(e.X)) * valSztuk;
+            iloscSztukLabel.Text = liczba.ToString("#") + " sz";
+            if (liczba < minSztuk * valSztuk)
+            {
+                liczba = minSztuk * valSztuk;
+                iloscSztukLabel.Text = liczba.ToString() + " sz";
+            }
+            else if (liczba > maxSztuk * valSztuk)
+            {
+                liczba = maxSztuk * valSztuk;
+                iloscSztukLabel.Text = liczba.ToString() + " sz";
+            }
+        }
+
+        private void begunokSztuk_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (!mouseSztuk) return;
+            thumbSztuk(begunokSztuk_width(e.X));
+            float liczaba = (float)(begunokSztuk_width(e.X)) * valSztuk;
+            iloscSztukLabel.Text = liczaba.ToString("#") + " sz";
+            if (liczaba < minSztuk * valSztuk)
+            {
+                liczaba = minSztuk * valSztuk;
+                iloscSztukLabel.Text = liczaba.ToString() + " sz";
+            }
+            else if (liczaba > maxSztuk * valSztuk)
+            {
+                liczaba = maxSztuk * valSztuk;
+                iloscSztukLabel.Text = liczaba.ToString() + " sz";
+            }
+
+        }
+        private void begunokSztuk_MouseUp(object sender, MouseEventArgs e)
+        {
+            mouseSztuk = false;
+        }
+
+
+        public float begunokSztuk_width(int x)
+        {
+            return minSztuk + (maxSztuk - minSztuk) * x / (float)(begunokSztuk.Width);
+
+        }
+
+        private void beginokSztuk_Draw(object sender, PaintEventArgs e)
+        {
+            float bar_Size = 0.45f;
+            float x = BarSztuk(default_ValueSztuk);
+            int y = (int)(begunokSztuk.Height * bar_Size);
+
+            e.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
+            e.Graphics.FillRectangle(Brushes.DodgerBlue, 0, y, begunokSztuk.Width, y / 2);
+            e.Graphics.FillRectangle(Brushes.Red, 0, y, x, begunokSztuk.Height - 2 * y);
+            using (Pen pen = new Pen(Color.Black, 8))
+            {
+                e.Graphics.DrawEllipse(pen, x + 4, y - 6, begunokSztuk.Height / 2, begunokSztuk.Height / 2);
+                e.Graphics.FillEllipse(Brushes.Red, x + 4, y - 6, begunokSztuk.Height / 2, begunokSztuk.Height / 2);
+            }
+            using (Pen pen = new Pen(Color.White, 5))
+            {
+                e.Graphics.DrawEllipse(pen, x + 4, y - 6, begunokSztuk.Height / 2, begunokSztuk.Height / 2);
+            }
+        }
+  //Здесь конец
+        private void result_Click(object sender, EventArgs e)
+        {          
+            if (wielkoscNaczynia.Text != null)
+            {
+                wielkoscNaczynia.Text = iloscNaczyniaLabel.Text;
+            }
+            else
+            {
+                int naczynia = Convert.ToInt32(wielkoscNaczynia.Text);
+                thumbNaczynia(maxNaczynia / valNaczynia * naczynia);
+                iloscNaczyniaLabel.Text = naczynia.ToString() + " ml";
+            }
+            if(zawartoscSpirytusu.Text != null)
+            {
+                zawartoscSpirytusu.Text = iloscSpirtLabel.Text;
+            }
+            else
+            {
+                int spirt = Convert.ToInt32(zawartoscSpirytusu.Text);
+                thumbSpirt(maxSpirt / valSpirt * spirt);
+                iloscSpirtLabel.Text = spirt.ToString() + " %";
+            }
+            if (iloscSztuk.Text != null)
+            {
+                iloscSztuk.Text = iloscSztukLabel.Text;
+            }
+            else
+            {
+                int sztuk = Convert.ToInt32(iloscSztuk.Text);
+                thumbSztuk(maxSztuk / valSztuk * sztuk);
+                iloscSztukLabel.Text = sztuk.ToString() + " sz";
+            }         
+        }
+        private void Clear_Click(object sender, EventArgs e)
+        {
+            thumbNaczynia(0);
+            thumbSpirt(0);
+            thumbSztuk(0);
+            wielkoscNaczynia.Text = "";
+            iloscSztuk.Text = "";
+            zawartoscSpirytusu.Text = "";
+            iloscNaczyniaLabel.Text = "";
+            iloscSpirtLabel.Text = "";
+            iloscSztuk.Text = "";
         }
 
     }
