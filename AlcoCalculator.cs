@@ -334,7 +334,7 @@ namespace AlcoCalculator
             zawartoscSpirytusu.Text = "";
             iloscNaczyniaLabel.Text = "";
             iloscSpirtLabel.Text = "";
-            iloscSztuk.Text = "";
+            iloscSztukLabel.Text = "";
         }
 
     }
