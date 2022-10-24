@@ -4,6 +4,39 @@ namespace AlcoCalculator
 {
     public partial class AlcoCalculator : Form
     {
+        private static readonly Image[] Snifter =
+        {
+            Image.FromFile("Images/Рюмка1.png"),
+            Image.FromFile("Images/Рюмка2.png"),
+            Image.FromFile("Images/Рюмка3.png"),
+            Image.FromFile("Images/Рюмка4.png"),
+            Image.FromFile("Images/Рюмка5.png"),
+        };
+        private static readonly Image[] Wineglass =
+        {
+            Image.FromFile("Images/Бокал1.png"),
+            Image.FromFile("Images/Бокал2.png"),
+            Image.FromFile("Images/Бокал3.png"),
+            Image.FromFile("Images/Бокал4.png"),
+            Image.FromFile("Images/Бокал5.png")
+        };
+        private static readonly Image[] Beerglass =
+        {
+            Image.FromFile("Images/ПивнойБокал1.png"),
+            Image.FromFile("Images/ПивнойБокал2.png"),
+            Image.FromFile("Images/ПивнойБокал3.png"),
+            Image.FromFile("Images/ПивнойБокал4.png"),
+            Image.FromFile("Images/ПивнойБокал5.png"),
+        };
+        private static readonly Image[] Glass =
+        {
+            Image.FromFile("Images/Стакан1.png"),
+            Image.FromFile("Images/Стакан2.png"),
+            Image.FromFile("Images/Стакан3.png"),
+            Image.FromFile("Images/Стакан4.png"),
+            Image.FromFile("Images/Стакан5.png"),
+        };       
+
         public AlcoCalculator()
         {
             InitializeComponent();
@@ -11,10 +44,8 @@ namespace AlcoCalculator
             begunokSpirt.Height = 30;
             thumbNaczynia(0);
             thumbSpirt(0);
-            thumbSztuk(0);
-        }
-
-
+            thumbSztuk(0);            
+        }        
         
         private void backgroundGradient(object sender, PaintEventArgs e)
         {
@@ -61,25 +92,27 @@ namespace AlcoCalculator
                 liczba = maxNaczynia * valNaczynia;
                 iloscNaczyniaLabel.Text = liczba.ToString() + " ml";
             }
+
         }
 
         private void begunokNaczynia_MouseMove(object sender, MouseEventArgs e)
         {
             if(!mouseNaczynia) return;
             thumbNaczynia(begunokNaczynia_width(e.X));
-            float liczaba = (float)(begunokNaczynia_width(e.X))*valNaczynia;          
-            iloscNaczyniaLabel.Text = liczaba.ToString("#")+" ml";
-            if (liczaba < minNaczynia*valNaczynia)
+            float liczba = (float)(begunokNaczynia_width(e.X))*valNaczynia;          
+            iloscNaczyniaLabel.Text = liczba.ToString("#")+" ml";
+            if (liczba < minNaczynia*valNaczynia)
             {
-                liczaba = minNaczynia * valNaczynia;             
-                iloscNaczyniaLabel.Text = liczaba.ToString()+" ml";
+                liczba = minNaczynia * valNaczynia;             
+                iloscNaczyniaLabel.Text = liczba.ToString()+" ml";
             }
-            else if (liczaba > maxNaczynia*valNaczynia)
+            else if (liczba > maxNaczynia*valNaczynia)
             {
-                liczaba = maxNaczynia*valNaczynia;               
-                iloscNaczyniaLabel.Text = liczaba.ToString()+" ml";
+                liczba = maxNaczynia*valNaczynia;               
+                iloscNaczyniaLabel.Text = liczba.ToString()+" ml";
             }
-           
+
+            UpdatePicture(liczba);
         }
         private void begunokNaczynia_MouseUp(object sender, MouseEventArgs e)
         {
@@ -156,17 +189,17 @@ namespace AlcoCalculator
         {
             if (!mouseSpirt) return;
             thumbSpirt(begunokSpirt_width(e.X));
-            float liczaba = (float)(begunokSpirt_width(e.X)) * valSpirt;
-            iloscSpirtLabel.Text = liczaba.ToString("#") + " %";
-            if (liczaba < minSpirt * valSpirt)
+            float liczba = (float)(begunokSpirt_width(e.X)) * valSpirt;
+            iloscSpirtLabel.Text = liczba.ToString("#") + " %";
+            if (liczba < minSpirt * valSpirt)
             {
-                liczaba = minSpirt * valSpirt;
-                iloscSpirtLabel.Text = liczaba.ToString() + " %";
+                liczba = minSpirt * valSpirt;
+                iloscSpirtLabel.Text = liczba.ToString() + " %";
             }
-            else if (liczaba > maxSpirt * valSpirt)
+            else if (liczba > maxSpirt * valSpirt)
             {
-                liczaba = maxSpirt * valSpirt;
-                iloscSpirtLabel.Text = liczaba.ToString() + " %";
+                liczba = maxSpirt * valSpirt;
+                iloscSpirtLabel.Text = liczba.ToString() + " %";
             }
 
         }
@@ -245,17 +278,17 @@ namespace AlcoCalculator
         {
             if (!mouseSztuk) return;
             thumbSztuk(begunokSztuk_width(e.X));
-            float liczaba = (float)(begunokSztuk_width(e.X)) * valSztuk;
-            iloscSztukLabel.Text = liczaba.ToString("#") + " sz";
-            if (liczaba < minSztuk * valSztuk)
+            float liczba = (float)(begunokSztuk_width(e.X)) * valSztuk;
+            iloscSztukLabel.Text = liczba.ToString("#") + " sz";
+            if (liczba < minSztuk * valSztuk)
             {
-                liczaba = minSztuk * valSztuk;
-                iloscSztukLabel.Text = liczaba.ToString() + " sz";
+                liczba = minSztuk * valSztuk;
+                iloscSztukLabel.Text = liczba.ToString() + " sz";
             }
-            else if (liczaba > maxSztuk * valSztuk)
+            else if (liczba > maxSztuk * valSztuk)
             {
-                liczaba = maxSztuk * valSztuk;
-                iloscSztukLabel.Text = liczaba.ToString() + " sz";
+                liczba = maxSztuk * valSztuk;
+                iloscSztukLabel.Text = liczba.ToString() + " sz";
             }
 
         }
@@ -337,5 +370,27 @@ namespace AlcoCalculator
             iloscSztukLabel.Text = "";
         }
 
+        private void UpdatePicture(float liczba)
+        {
+            if (liczba >= 0 && liczba <= 50)
+            {
+                pbNaczynia.Image = Snifter[0];
+            }
+
+            if (liczba > 50 && liczba <= 200)
+            {
+                pbNaczynia.Image = Glass[0];
+            }
+
+            if (liczba > 200 && liczba <= 250)
+            {
+                pbNaczynia.Image = Wineglass[0];
+            }
+
+            if (liczba > 250 && liczba <= 500)
+            {
+                pbNaczynia.Image = Beerglass[0];
+            }
+        }
     }
 }
