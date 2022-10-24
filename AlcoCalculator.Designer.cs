@@ -72,33 +72,37 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.label1.Location = new System.Drawing.Point(14, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(129, 20);
+            this.label1.Size = new System.Drawing.Size(156, 20);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Wielkosc naczynia";
+            this.label1.Text = "Wielkosc naczynia(ml)";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(14, 92);
+            this.label2.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.label2.Location = new System.Drawing.Point(14, 89);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(139, 20);
+            this.label2.Size = new System.Drawing.Size(161, 20);
             this.label2.TabIndex = 4;
-            this.label2.Text = "Zawartosc spirytusu";
+            this.label2.Text = "Zawartosc spirytusu(%)";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.label3.Location = new System.Drawing.Point(14, 174);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(137, 20);
+            this.label3.Size = new System.Drawing.Size(160, 20);
             this.label3.TabIndex = 5;
-            this.label3.Text = "Ilosc sztuk naczynia";
+            this.label3.Text = "Ilosc sztuk naczynia(sz)";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.label4.Location = new System.Drawing.Point(14, 309);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(130, 20);
@@ -108,6 +112,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.label5.Location = new System.Drawing.Point(175, 309);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(118, 20);
@@ -161,7 +166,7 @@
             // iloscNaczyniaLabel
             // 
             this.iloscNaczyniaLabel.AutoSize = true;
-            this.iloscNaczyniaLabel.Location = new System.Drawing.Point(149, 12);
+            this.iloscNaczyniaLabel.Location = new System.Drawing.Point(208, 12);
             this.iloscNaczyniaLabel.Name = "iloscNaczyniaLabel";
             this.iloscNaczyniaLabel.Size = new System.Drawing.Size(0, 20);
             this.iloscNaczyniaLabel.TabIndex = 13;
@@ -169,7 +174,7 @@
             // iloscSpirtLabel
             // 
             this.iloscSpirtLabel.AutoSize = true;
-            this.iloscSpirtLabel.Location = new System.Drawing.Point(159, 92);
+            this.iloscSpirtLabel.Location = new System.Drawing.Point(208, 99);
             this.iloscSpirtLabel.Name = "iloscSpirtLabel";
             this.iloscSpirtLabel.Size = new System.Drawing.Size(0, 20);
             this.iloscSpirtLabel.TabIndex = 14;
@@ -208,7 +213,7 @@
             // iloscSztukLabel
             // 
             this.iloscSztukLabel.AutoSize = true;
-            this.iloscSztukLabel.Location = new System.Drawing.Point(157, 174);
+            this.iloscSztukLabel.Location = new System.Drawing.Point(208, 174);
             this.iloscSztukLabel.Name = "iloscSztukLabel";
             this.iloscSztukLabel.Size = new System.Drawing.Size(0, 20);
             this.iloscSztukLabel.TabIndex = 18;
