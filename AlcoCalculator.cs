@@ -1,9 +1,12 @@
+using System;
 using System.Drawing.Drawing2D;
 
 namespace AlcoCalculator
 {
     public partial class AlcoCalculator : Form
     {
+    
+
         private static readonly Image[] Snifter =
         {
             Properties.Resources.Snifter1,
@@ -45,8 +48,17 @@ namespace AlcoCalculator
             thumbNaczynia(0);
             thumbSpirt(0);
             thumbSztuk(0);            
-        }        
-        
+        }
+        public double VolumeAlcohol(double alkochol, double volume, double amount)
+        {       
+            return volume * amount * (alkochol/100);
+        }
+
+        public double VolumeAll(double volume, double amount)
+        {
+            return volume * amount;
+        }
+
         private void backgroundGradient(object sender, PaintEventArgs e)
         {
             Graphics graphics = e.Graphics;
@@ -292,6 +304,12 @@ namespace AlcoCalculator
             }
 
         }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void begunokSztuk_MouseUp(object sender, MouseEventArgs e)
         {
             mouseSztuk = false;
@@ -325,37 +343,89 @@ namespace AlcoCalculator
         }
   //Здесь конец
         private void result_Click(object sender, EventArgs e)
-        {          
-            if (wielkoscNaczynia.Text != null)
+        {
+            try
             {
-                wielkoscNaczynia.Text = iloscNaczyniaLabel.Text;
+
+
+                if (wielkoscNaczynia.Text == "")
+                {
+                    string Nacz = iloscNaczyniaLabel.Text;
+                    string NewNacz = Nacz.TrimEnd(' ', 'm', 'l');
+                    wielkoscNaczynia.Text = NewNacz;
+                }
+                else
+                {
+                    int naczynie = Int32.Parse(wielkoscNaczynia.Text);
+                    thumbNaczynia(maxSztuk / valSztuk * naczynie);
+                    iloscNaczyniaLabel.Text = naczynie.ToString() + " ml";
+
+                }
+
+                if (zawartoscSpirytusu.Text == "")
+                {
+                    string Spitr = iloscSpirtLabel.Text;
+                    string NewSpirt = Spitr.TrimEnd(' ', '%');
+                    zawartoscSpirytusu.Text = NewSpirt;
+                }
+                else
+                {
+                    int spirytus = Int32.Parse(zawartoscSpirytusu.Text);
+
+                    if (spirytus < 0 || spirytus > 95)
+                    {
+                        MessageBox.Show("Error! Enter true data alcohol!");
+                        zawartoscSpirytusu.Text = "";
+                        iloscSpirtLabel.Text = "";
+                    }
+                    else
+                    {
+                        thumbSpirt(maxSztuk / valSztuk * spirytus);
+                        iloscSpirtLabel.Text = spirytus.ToString() + " %";
+                    }
+
+                }
+
+                if (iloscSztuk.Text == "")
+                {
+
+                    string Ilosc = iloscSztukLabel.Text;
+                    string newIlosc = Ilosc.TrimEnd(' ', 's', 'z');
+                    iloscSztuk.Text = newIlosc;
+                }
+                else
+                {
+                    int sztuk = Int32.Parse(iloscSztuk.Text);
+                    thumbSztuk(maxSztuk / valSztuk * sztuk);
+                    iloscSztukLabel.Text = sztuk.ToString() + " sz";
+
+                }
+
+                double N = Double.Parse(wielkoscNaczynia.Text);
+                double S = Double.Parse(zawartoscSpirytusu.Text);
+                double I = Double.Parse(iloscSztuk.Text);
+
+                resultTextBoxAlcohol.Text = VolumeAlcohol(S, N, I).ToString() + " ml";
+                resultTextBoxVolume.Text = VolumeAll(N, I).ToString() + " ml";
+
+                
             }
-            else
+            catch 
             {
-                int naczynia = Convert.ToInt32(wielkoscNaczynia.Text);
-                thumbNaczynia(maxNaczynia / valNaczynia * naczynia);
-                iloscNaczyniaLabel.Text = naczynia.ToString() + " ml";
+                MessageBox.Show("Error! Enter true data!");
+                thumbNaczynia(0);
+                thumbSpirt(0);
+                thumbSztuk(0);
+                wielkoscNaczynia.Text = "";
+                iloscSztuk.Text = "";
+                zawartoscSpirytusu.Text = "";
+                iloscNaczyniaLabel.Text = "";
+                iloscSpirtLabel.Text = "";
+                iloscSztukLabel.Text = "";
+                resultTextBoxAlcohol.Text = "";
+                resultTextBoxVolume.Text = "";
             }
-            if(zawartoscSpirytusu.Text != null)
-            {
-                zawartoscSpirytusu.Text = iloscSpirtLabel.Text;
-            }
-            else
-            {
-                int spirt = Convert.ToInt32(zawartoscSpirytusu.Text);
-                thumbSpirt(maxSpirt / valSpirt * spirt);
-                iloscSpirtLabel.Text = spirt.ToString() + " %";
-            }
-            if (iloscSztuk.Text != null)
-            {
-                iloscSztuk.Text = iloscSztukLabel.Text;
-            }
-            else
-            {
-                int sztuk = Convert.ToInt32(iloscSztuk.Text);
-                thumbSztuk(maxSztuk / valSztuk * sztuk);
-                iloscSztukLabel.Text = sztuk.ToString() + " sz";
-            }         
+
         }
         private void Clear_Click(object sender, EventArgs e)
         {
@@ -368,6 +438,8 @@ namespace AlcoCalculator
             iloscNaczyniaLabel.Text = "";
             iloscSpirtLabel.Text = "";
             iloscSztukLabel.Text = "";
+            resultTextBoxAlcohol.Text = "";
+            resultTextBoxVolume.Text = "";
         }
 
         private void UpdatePicture(float liczba)
