@@ -59,7 +59,7 @@ namespace AlcoCalculator
 
         //Это отрисовка компонентов для ползунка ОБЪЁМА начало
         float default_ValueNaczynia = 0.1f, minNaczynia = 0.0f, maxNaczynia = 1.0f;
-        int valNaczynia = 5000;//этодля преобразования перемещения ползунка в миллилитры
+        int valNaczynia = 1000;//этодля преобразования перемещения ползунка в миллилитры
         bool mouseNaczynia = false;
         public float BarNaczynia(float value)
         {
