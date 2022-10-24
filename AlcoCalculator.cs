@@ -355,7 +355,7 @@ namespace AlcoCalculator
                 else
                 {
                     int naczynie = Int32.Parse(wielkoscNaczynia.Text);
-                    thumbNaczynia(maxSztuk / valSztuk * naczynie);
+                    thumbNaczynia(maxNaczynia / valNaczynia * naczynie);
                     iloscNaczyniaLabel.Text = naczynie.ToString() + " ml";
 
                 }
